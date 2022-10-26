@@ -1,0 +1,529 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*{
+    background-color: #FDFAF6;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Nav Bar */
+.nav-toggle{
+    display: none;
+}
+
+.mobile-menu > label{
+    margin-top: -.1em;
+}
+nav, .mobile-menu{
+    height: auto;
+    font-size: 1.1em;
+    /* background-color: rgba(0, 0, 0, 0.162); */
+    font-family: 'Poppins';
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    /* gap: 7em; */
+}
+
+.button-ujung{
+    margin-top: 1.5em;
+}
+.button-ujung > a{
+    border : 2px solid #2DC1B0;
+    padding: .7em;
+    border-radius: 5px;
+}
+.button-ujung > a:hover{
+    border : 2px solid #2DC1B0;
+    padding: .7em;
+    border-radius: 5px;
+    background-color: #2DC1B0;
+    color: white;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+@media screen and (min-width: 800px){
+    .mobile-menu{
+        display: none;
+    }
+    .mobile-menu > label, .landing-page > nav > label{
+        display: none;
+    }
+}
+@media screen and (max-width: 800px){
+    nav{
+        display: none;
+    }
+    .right-nav > ul{
+        display: flex;
+        flex-direction: column;
+    }
+    .mobile-menu{
+        /* margin-left: 3em; */
+        display: flex;
+        justify-content: space-around;
+        gap: 7em;
+        /* margin-right: 2em; */
+    }
+    img.mobile-menu-exit{
+        margin-right: 3em;
+        
+    }
+    .mobile-menu > .right-nav{
+        display: flex;
+        /* margin-right: -3em; */
+        margin-top: 1.7em;
+
+    }
+    .mobile-menu > label{
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+    }
+    .mobile-menu > label >  img{
+        /* margin-right: 3em; */
+        margin-top: 1.6em;
+        width: 40px;
+        cursor: pointer;
+    }
+
+    nav{
+        height: 100%;
+        background-color: #FDFAF6;
+    }
+    .right-nav{
+        background-color: #FDFAF6;
+    }
+    nav > .left-nav > a{
+        position: fixed;
+        /* margin-left: 4em; */
+        /* display:none; */
+    }
+    nav{
+        width: 100%;
+        height: 100%;
+        background-color: #FDFAF6;
+    }
+    nav > .left-nav{
+        padding-left: 2em;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        background-color: #FDFAF6;
+    }
+    nav > .right-nav{
+        padding-top: 5.8em;
+    }
+    nav > .right-nav > ul{
+        width: 90%;
+        text-align: left;
+        background-color: #FDFAF6;
+        position: fixed;
+        right: 0em;
+    }
+    nav > .right-nav > ul > li{
+        padding-left: 4em;
+        z-index: 1000;
+        right: 0%;
+        border-bottom: 1px solid #2DC1B0;
+        /* margin-right: -3em; */
+        /* padding-right: 3em; */
+    }
+    nav > label > img{
+        z-index: 9999;
+        position: fixed;
+        top: 1.4em;
+        right:  0%;
+        width: 40px;
+        cursor: pointer;
+        display: flex;
+        justify-content: right;
+        align-items: flex-end;
+    }
+    .nav-toggle:checked ~ nav{
+        display: block;
+    }
+    .button-ujung > a{
+        position: fixed;
+        bottom: 0%;
+        /* z-index: 1000; */
+        width: 100%;
+
+    }
+    .button-ujung{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+}
+.left-nav{
+    /* margin-left: 3em; */
+    padding: 1.2em;
+}
+.right-nav > ul{
+    padding-top: .5em;
+    gap: 1em;
+    margin-right: 3em;
+    display: flex;
+    list-style-type: none;
+}
+.right-nav > ul > li{
+    padding: 1.2em;
+}
+.right-nav >  ul > li >  a:hover{
+    color: #2DC1B0;
+}
+.active-page{
+    color: #2DC1B0;
+}
+
+.logo{
+    cursor: pointer;
+    width: 150px;
+    height: auto;
+}
+.logo-footer{
+    width: 150px;
+    height: auto; 
+}
+.logo-doang{
+    width: 50px;
+    height: auto;
+}
+.content{
+    margin-left: 5em;
+    margin-right: 4em;
+}
+.content > img{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    width: 100%;
+    height: auto;
+}
+.judul{
+    margin: 2em 0 2em 3em;
+    font-family: 'Poppins';
+    display: flex;
+    /* justify-content: space-around; */
+    align-items: center;
+    /* justify-content: center; */
+}
+.judul > .kiri {
+    /* text-align: right; */
+    font-size: 40px;
+    margin-right: 1em;
+    font-weight: 700;
+    width: 250px;
+
+}
+@media screen and (min-width: 877px){
+    .logo-doang{
+        display: none;
+    }
+
+}
+@media screen and (max-width: 877px){
+    .logo{
+        display: none;
+    }
+}
+.judul > .kanan{
+    font-size: 20px;
+    font-weight: 100;
+    text-align: justify;
+}
+.judul > .kanan > .tombol{
+    display: flex;
+    margin-top: 2em;
+}
+.judul > .kanan > .tombol > a{
+    display: flex;
+    transition: transform .2s;
+    font-weight: 700;
+    color: white;
+    padding: 1em;
+    background-color: #2DC1B0;
+}
+
+
+.judul > .kanan > .tombol > a >  img{
+    width: 20px;
+    height: 20px;
+    margin-top: .2em;
+    margin-left: 0.5em;
+    background-color: #2DC1B0;
+    color: #2DC1B0;
+    transition: transform .2s;
+}
+.tombol > a:hover{
+    transform: scale(1.1);
+}
+.judul2{
+    font-size: 1.9em;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    font-family: 'Poppins';
+    text-align: center;
+    font-weight: 800;
+}
+.display-cars{
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 4em;
+}
+.cars{
+    cursor: pointer;
+}
+@media screen and (max-width: 1256px){
+    .display-cars{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .cars{
+        margin-bottom: 2em;
+    }
+}
+.cars > img{
+    width: 400px;
+    height: auto;
+}
+.cars{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-family: 'Poppins';
+    font-size: 1.5em;
+    font-weight: 600;
+    transition: transform .2s;
+}
+.cars:hover{
+    transform: scale(1.1);
+}
+
+.middle-button{
+    display: flex;
+    justify-content: center;
+    /* margin-top: 2em; */
+}
+.show-more > a{
+    width: 200px;
+    padding-top: .3em;
+    padding-bottom: .3em;
+    border: 1px solid #2DC1B0;
+    border-radius: 12px;
+    font-size: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: 'Poppins';
+    margin-bottom: 3em;
+    transition: transform .2s;
+    color: #2DC1B0;
+}
+.show-more > a:hover{
+    color: white;
+    background-color: #2DC1B0;
+}
+/* Footer */
+footer{
+    font-family: 'Poppins';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 1em;
+    background-color: #FAF1E6;
+    text-align: center;
+    bottom: 0;
+    margin-top: auto;
+    padding-bottom: 1em;
+}
+
+footer > img{
+    margin-bottom: 1em;
+    background-color: #FAF1E6;
+}
+.social-media{
+    display: flex;
+    background-color: #FAF1E6;
+    justify-content: center;
+    gap: 1em;
+}
+.social-media > a{
+    background-color: #FAF1E6;
+}
+.social-media > a > img{
+    background-color: #FAF1E6;
+    width: 20px;
+    /* filter: brightness(10000%); */
+    /* height: 40px; */
+}
+
+/* Market */
+.show-products > .display-cars{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    text-align: center;
+    font-family: 'Poppins';
+    row-gap: 2em;
+    column-gap: 1em;
+    font-size: 1.5em;
+    font-weight: 600;
+    transition: transform .2s;
+}
+.show-products > .judul-market{
+    margin-left: 48px;
+    font-family: 'Poppins';
+    margin-bottom: 1em;
+    font-size: 39px;
+}
+.show-products > .display-cars > .cars{
+    font-size: 1em;
+}
+@media screen and (max-width: 1270px){
+    .show-products > .display-cars{
+        display: grid;
+        grid-template-columns: auto auto;
+        text-align: center;
+        font-family: 'Poppins';
+        row-gap: 2em;
+        column-gap: 2em;
+        font-size: 1.5em;
+        font-weight: 600;
+        transition: transform .2s;
+    }
+}
+@media screen and (max-width: 927px){
+    .show-products > .display-cars{
+        display: grid;
+        grid-template-columns: auto;
+        text-align: center;
+        font-family: 'Poppins';
+        row-gap: 2em;
+        column-gap: 2em;
+        font-size: 1.5em;
+        font-weight: 600;
+        transition: transform .2s;
+    }
+}
+
+/* Contact Us */
+.khusus-contact{
+    visibility: hidden;
+}
+
+.form-contact{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: #FAF1E6; */
+    /* margin-left: 8em; */
+    margin-bottom: 3em;
+}
+
+form{
+    padding: 1em 1.5em 1em 1.5em;
+    font-family: 'Poppins';
+    background-color: #FAF1E6;
+    border-radius: 12px;
+}
+form > h2{
+    text-align: center;
+    background-color: #FAF1E6;
+    padding: 1em;
+}
+input,label,textarea,select{
+    border-radius: 4px;
+    margin: 1em;
+    font-family: 'Poppins';
+}
+
+input,textarea{
+    border: 1px solid #0d0d0d;
+}
+input.submit{
+    cursor: pointer;
+    background-color: #FAF1E6;
+    border: #2DC1B0 3px solid;
+}
+.bukan-submit{
+    width: 400px;
+    padding: 1em;
+}
+textarea{
+    height: 200px;
+    width: 400px;
+    resize: none;
+    padding-left: 1em;
+    padding-top: 1em;
+    margin-top: -1em;
+}
+.cuman-judul{
+    margin-left: 1em;
+}
+
+input[type="radio"]{
+    margin-right: -.5em;
+}
+.isi-salutation{
+    display: flex;
+    background-color: #FAF1E6;
+    /* flex-direction: column; */
+}
+.cuman-judul{
+    margin-top: -1em;
+    background-color: #FAF1E6;
+}
+.panggilan, .panggilan > label{
+    background-color: #FAF1E6;
+}
+
+select{
+    border: 1px solid #0d0d0d;
+    width: 400px;
+    margin-top: 1em;
+    padding: 1em 1em 1em 1em;
+}
+.submit-position{
+    margin-top: -1em;
+    background-color: #FAF1E6;
+    text-align: center;
+    justify-content: center;
+}
+input.submit{
+    padding: .5em 2em .5em 2em;
+    cursor: pointer;
+    background-color: #FDFAF6;
+    border: #2DC1B0 2px solid;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+input.submit:hover{
+    background-color: #2DC1B0;
+    color: white;
+}
+
+/* Abput Us */
+.tentang-kami{
+    font-family: 'Poppins';
+    margin: 1em 4em 17em 4em;
+}
+
+.tentang-kami > h3{
+    font-size: 39px;
+    margin-bottom: 2em;
+}
+
+.tentang-kami > p{
+    font-size: 20px;
+    text-align: justify;
+}
